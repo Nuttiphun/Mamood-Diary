@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_happy_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1sp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/cat_happy" />
+
+    <TextView
+        android:id="@+id/cellHappyDayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15sp"
+        android:text="1"
+        android:textColor="#FFFFFF" />
+
+</FrameLayout>

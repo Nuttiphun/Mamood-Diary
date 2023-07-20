@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Mamood Diary</string>
+
+    <string name="id">รหัส</string>
+    <string name="save">เพิ่มข้อมูล</string>
+    <string name="day">วัน</string>
+    <string name="month">เดือน</string>
+    <string name="year">ปี</string>
+    <string name="message">message</string>
+    <string name="happy">mood_happy</string>
+    <string name="smile">mood_smile</string>
+    <string name="normal">mood_normal</string>
+    <string name="sad">mood_sad</string>
+    <string name="notok">mood_notok</string>
+
+    <integer name="slide_animation_duration">300</integer>
+
+</resources>

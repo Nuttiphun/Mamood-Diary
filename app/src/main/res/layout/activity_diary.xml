@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="409dp"
+                android:layout_height="66dp"
+                android:background="#1A1028"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/diaryBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="376dp"
+                android:layout_marginTop="12dp"
+                android:text="X"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="78dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="@+id/toolbar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/dateInfoTextView"
+                android:layout_width="250dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="4dp"
+                android:text="Thursday, April 6"
+                android:textAlignment="textStart"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView8"
+                app:layout_constraintTop_toTopOf="@+id/toolbar"
+                app:layout_constraintVertical_bias="0.515" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="158dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/calendar_noted_cell_bg"
+                    android:backgroundTint="#32EEECF1"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="188dp">
+
+                        <TextView
+                            android:id="@+id/monthTextView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="How was your day?"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/happyImageButton"
+                            android:layout_width="70dp"
+                            android:layout_height="68dp"
+                            android:layout_marginBottom="52dp"
+                            android:background="@drawable/selector_button"
+                            android:padding="3dp"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/smileImageButton"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/monthTextView4"
+                            app:layout_constraintVertical_bias="0.652"
+                            app:srcCompat="@drawable/cat_happy" />
+
+                        <ImageButton
+                            android:id="@+id/smileImageButton"
+                            android:layout_width="70dp"
+                            android:layout_height="68dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="55dp"
+                            android:background="@drawable/selector_button"
+                            android:padding="3dp"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/normalImageButton"
+                            app:layout_constraintStart_toEndOf="@+id/happyImageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/monthTextView4"
+                            app:srcCompat="@drawable/cat_smile" />
+
+                        <ImageButton
+                            android:id="@+id/normalImageButton"
+                            android:layout_width="70dp"
+                            android:layout_height="68dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="55dp"
+                            android:background="@drawable/selector_button"
+                            android:padding="3dp"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/notOkImageButton"
+                            app:layout_constraintStart_toEndOf="@+id/smileImageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/monthTextView4"
+                            app:srcCompat="@drawable/cat_normal" />
+
+                        <ImageButton
+                            android:id="@+id/notOkImageButton"
+                            android:layout_width="70dp"
+                            android:layout_height="68dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="55dp"
+                            android:background="@drawable/selector_button"
+                            android:padding="3dp"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/sadImageButton"
+                            app:layout_constraintStart_toEndOf="@+id/normalImageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/monthTextView4"
+                            app:srcCompat="@drawable/cat_not_ok" />
+
+                        <ImageButton
+                            android:id="@+id/sadImageButton"
+                            android:layout_width="70dp"
+                            android:layout_height="68dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="55dp"
+                            android:background="@drawable/selector_button"
+                            android:padding="3dp"
+                            android:scaleType="centerInside"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/notOkImageButton"
+                            app:layout_constraintTop_toBottomOf="@+id/monthTextView4"
+                            app:srcCompat="@drawable/cat_sad" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/calendar_noted_cell_bg"
+                    android:backgroundTint="#32EEECF1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/monthTextView5"
+                        android:layout_width="309dp"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:text="Today's note"
+                        android:textAlignment="center"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/diary_bg"
+                        android:scrollbars="vertical">
+
+                        <EditText
+                            android:id="@+id/diaryEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edit_text_clear"
+                            android:gravity="top"
+                            android:hint="Add note"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:minLines="20"
+                            android:padding="10dp"
+                            android:textColor="#676666" />
+                    </androidx.core.widget.NestedScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="83dp"
+                        app:srcCompat="@drawable/decorate_cat" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="match_parent"
+                        android:layout_height="83dp"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/decorate_cat" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/diarySaveButton"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/save_button"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:text="SAVE"
+            android:textSize="24sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
